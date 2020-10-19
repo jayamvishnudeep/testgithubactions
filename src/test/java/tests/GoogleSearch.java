@@ -1,6 +1,5 @@
 package tests;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -17,7 +16,7 @@ public class GoogleSearch {
     public void Setup() {
 
 
-        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "src/main/java/drivers/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors", "--silent");
         driver = new ChromeDriver(options);
