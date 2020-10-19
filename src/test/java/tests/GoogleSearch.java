@@ -18,9 +18,9 @@ public class GoogleSearch {
 
 
         WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors", "--silent");
-        driver = new ChromeDriver(options);
+        //ChromeOptions options = new ChromeOptions();
+        //options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors", "--silent");
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
 
     }
